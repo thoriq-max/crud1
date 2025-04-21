@@ -1,37 +1,20 @@
-# Foobar
+# Aplikasi CRUD Mahasiswa
 
-Foobar is a Python library for dealing with word pluralization.
+Aplikasi CRUD Mahasiswa adalah aplikasi web sederhana berbasis **PHP**, **MySQL**, dan **Bootstrap** yang memungkinkan pengguna untuk melakukan **Create**, **Read**, **Update**, dan **Delete** data mahasiswa. Aplikasi ini juga dilengkapi dengan fitur **login**, **pencarian**, **pagination**, dan **import data dari file Excel (.xlsx)** menggunakan PhpSpreadsheet.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+1. **Clone atau Download Repository**
+   Ekstrak folder ke dalam direktori `htdocs` (jika menggunakan XAMPP) atau ke direktori server lokal kamu.
 
-```bash
-pip install foobar
-```
+2. **Import Database**
+   Gunakan file `crud_excel_db.sql` untuk membuat database dan tabel:
+   - Buka `phpMyAdmin`
+   - Buat database `crud_excel`
+   - Import file SQL tersebut
 
-## Usage
+3. **Install PhpSpreadsheet**
+   Jalankan perintah berikut di terminal dari direktori project:
 
-```python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+   ```bash
+   composer require phpoffice/phpspreadsheet
