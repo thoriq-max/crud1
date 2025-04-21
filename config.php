@@ -32,7 +32,7 @@ mysqli_query($conn, "CREATE TABLE IF NOT EXISTS mahasiswa (
 )");
 
 // Tambahkan user admin jika belum ada
-$result = mysqli_query($conn, "SELECT * FROM users WHERE username = 'admin'");
+$result = mysqli_query($conn, "SELECT * FROM user WHERE username = 'admin'");
 if (mysqli_num_rows($result) === 0) {
     mysqli_query($conn, "INSERT INTO users (username, password) VALUES ('admin', MD5('123'))");
 }
